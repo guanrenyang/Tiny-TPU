@@ -48,7 +48,12 @@ std::vector<torch::Tensor> mylinear_backward(
     return {grad_input, grad_weights};
 }
 
+void my_cppprint(torch::Tensor input){
+    std::cout<< input;
+}
+
 PYBIND11_MODULE(TORCH_EXTENSION_NAME, m) {
   m.def("forward", &mylinear_forward, "myLinear forward");
   m.def("backward", &mylinear_backward, "myLinear backward");
+  m.def("cppprint", &my_cppprint, "my cpp print");
 }

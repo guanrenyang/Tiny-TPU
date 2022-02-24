@@ -7,6 +7,33 @@ import torch.optim as optim
 from torch.optim.lr_scheduler import StepLR
 from torchvision import datasets, transforms
 import torchvision.models
+class MyNet(nn.Module):
+    def __init__(self) -> None:
+        super(MyNet, self).__init__()
+        self.conv1 = nn.Conv2d(1, 32, 3, 1, 'same')
+        self.conv2 = nn.Conv2d(32, 64, 3, 1, 'same')
+        self.conv3 = nn.Conv2d(64, 128, 3,1, 'same')
+        self.conv4 = nn.Conv2d(128, 64, 3,1, 'same')
+        self.conv5 = nn.Conv2d(64, 32, 3, 1, 'same')
+        self.fc1 = nn.Linear(25088, 128)
+        self.fc2 = nn.Linear(128, 10)
+
+    def forward(self, x):
+        h = self.conv1(x)
+        h = F.relu(h)
+        h = self.conv2(h)
+        h = F.relu(h)
+        h = self.conv3(h)
+        h = F.relu(h)
+        h = self.conv4(h)
+        h = F.relu(h)
+        h = self.conv5(h)
+        h = F.relu(h)
+        h = torch.flatten(h, 1)
+        h = self.fc1(h)
+        h = self.fc2(h)
+        return h
+
 
 class Net(nn.Module):
     def __init__(self):
@@ -86,7 +113,8 @@ def main():
                        ])),
         batch_size=args.batchsize, shuffle=True)
 
-    model = Net().to(device)
+    # model = Net().to(device)
+    model = MyNet().to(device)
     optimizer = optim.SGD(model.parameters(), lr=args.lr)
     lr_scheduler = StepLR(optimizer, step_size=2, gamma=0.5)
 

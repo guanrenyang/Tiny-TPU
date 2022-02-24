@@ -21,6 +21,9 @@ class myLinearFunction(torch.autograd.Function):
         # grad_input = grad_output.mm(weight)
         # grad_weight = grad_output.t().mm(input)
         grad_input, grad_weight = mylinear_cpp.backward(grad_output, input, weight)
+
+        mylinear_cpp.cppprint(input) # my implementation
+
         return grad_input, grad_weight
 
 

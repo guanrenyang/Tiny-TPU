@@ -25,7 +25,7 @@ class myLinear(nn.Module):
         super(myLinear, self).__init__()
         self.input_features = input_features
         self.output_features = output_features
-        self.weight = nn.Parameter(torch.Tensor(output_features, input_features))
+        self.weight = nn.Parameter(torch.Tensor(output_features,  input_features))
         self.weight.data.uniform_(-0.1, 0.1)
     
     def forward(self, input):
