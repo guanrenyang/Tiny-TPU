@@ -67,7 +67,7 @@ class myLinearFunction(torch.autograd.Function):
 
 > CPP Binding官网教程：https://pybind11.readthedocs.io/en/stable/
 
-本次作业的CPP Binding并非使用C++定义模型，只是使用C++定义函数以供Pytorch调用。
+本部分实现了**1.使用C++定义函数，2.打包成Python module 3.在Python中调用C++函数**。
 
 [`setup.py`](https://github.com/guanrenyang/AI3615-AI-Chip-Design/blob/main/hw1/2.%20customed%20layer%20%2B%20cpp%20binding/2.%20cpp%20binding/setup.py)的作用是 _安装_ `.cpp`文件，将一个`.cpp`文件打包为Python Module。
 [`mylinear.cpp`](https://github.com/guanrenyang/AI3615-AI-Chip-Design/blob/main/hw1/2.%20customed%20layer%20%2B%20cpp%20binding/2.%20cpp%20binding/mylinear.cpp)中的`PYBIND11_MODULE`语句将一个`cpp`函数 _注册_ 为Python函数。
