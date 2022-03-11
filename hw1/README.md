@@ -1,15 +1,28 @@
 # Homework 1
 
-> Homework1 只是一个tutorial，不要提交。
-## Pytorch Basics
+## 实验目的
+
+**能够使用CUDA编写基础算子，再通过pytorch进行调用**
+
+
+## 实验内容
+
+实验依据课程进度，将被拆解成三个部分：
+
+1. Part1——搭建pytorch+CUDA环境，学习用pytorch搭建神经网络
+2. Part2——学习c++代码到python端的binding（Python调用C++代码）
+3. Part3——学习基础的cuda编程（编写算子的cuda实现，并在pytorch端调用）
+
+
+## Part1 : Pytorch Basics
 
 **Just learn pytorch**
 
-## Customed Layer 自定义算子
+## Part 2-1:Customed Layer 自定义算子
 
 > 详细内容参见官网教程：https://pytorch.org/docs/stable/notes/extending.html#extending-autograd
 
-利用`torch.autograd.Function`和`torch.nn.Module` 自定义算子的`forward()`, `backward()`操作:
+**自己实现算子的正向、反向传播**，即利用`torch.autograd.Function`和`torch.nn.Module` 自定义算子的`forward()`, `backward()`。自定义算子的步骤如下：
 
 **Steps:**
 

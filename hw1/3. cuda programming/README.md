@@ -3,10 +3,6 @@
 1. 学习基础CUDA编程
 1. 完成cuda端矩阵乘法的编写，并绑定到python端使用pytorch调用
 
-
-
-
-
 ## 实验步骤
 
 1. 编译vector add文件夹

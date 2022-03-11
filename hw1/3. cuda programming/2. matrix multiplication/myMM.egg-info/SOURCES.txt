@@ -1,0 +1,7 @@
+setup.py
+csrc/MM.cu
+csrc/bind_torch.cpp
+myMM.egg-info/PKG-INFO
+myMM.egg-info/SOURCES.txt
+myMM.egg-info/dependency_links.txt
+myMM.egg-info/top_level.txt
