@@ -36,6 +36,7 @@ Course project of AI3615 AI chip design, Shanghai Jiao Tong University(SJTU).
 │   │   │   └── setup.py
 │   │   └── README.md
 │   └── README.md
+├── homework2				//第二次作业: Tiny-TPU
 ├── LICENSE
 └── README.md
 

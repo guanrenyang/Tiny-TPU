@@ -34,9 +34,9 @@ void MatMul_CUDA(const float *A_ptr, const float *B_ptr, float *C_ptr, const int
     cudaMalloc(&dC, size_C);
 
     // copy from host to device
-    cudaMemcpy(dA, A_ptr, size_A, cudaMemcpyDeviceToHost);
-    cudaMemcpy(dB, B_ptr, size_B, cudaMemcpyDeviceToHost);
-    cudaMemcpy(dC, C_ptr, size_C, cudaMemcpyDeviceToHost);
+    cudaMemcpy(dA, A_ptr, size_A, cudaMemcpyHostToDevice);
+    cudaMemcpy(dB, B_ptr, size_B, cudaMemcpyHostToDevice);
+    cudaMemcpy(dC, C_ptr, size_C, cudaMemcpyHostToDevice);
 
     
     // 一个block最多只能有1024个thread

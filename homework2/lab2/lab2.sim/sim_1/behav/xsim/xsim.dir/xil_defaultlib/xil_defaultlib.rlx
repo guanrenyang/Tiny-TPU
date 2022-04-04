@@ -1,0 +1,15 @@
+0.7
+2020.2
+Oct 19 2021
+02:56:52
+/home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.sim/sim_1/behav/xsim/glbl.v,1634335545,verilog,,,,glbl,,uvm,,,,,,
+/home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.srcs/sources_1/imports/lab2_src/PE_array.sv,1648953452,systemVerilog,,/home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.srcs/sources_1/imports/lab2_src/controller.sv,,PE_array,,uvm,,,,,,
+/home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.srcs/sources_1/imports/lab2_src/controller.sv,1647960322,systemVerilog,,/home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.srcs/sources_1/imports/lab2_src/decoder.sv,,controller,,uvm,,,,,,
+/home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.srcs/sources_1/imports/lab2_src/decoder.sv,1647919768,systemVerilog,,/home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.srcs/sources_1/imports/lab2_src/elementwise_array.sv,,decoder,,uvm,,,,,,
+/home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.srcs/sources_1/imports/lab2_src/elementwise_array.sv,1647868562,systemVerilog,,/home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.srcs/sources_1/imports/lab2_src/elementwise_unit.sv,,elementwise_array,,uvm,,,,,,
+/home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.srcs/sources_1/imports/lab2_src/elementwise_unit.sv,1647868634,systemVerilog,,/home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.srcs/sources_1/imports/lab2_src/input_buffer.sv,,elementwise_unit,,uvm,,,,,,
+/home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.srcs/sources_1/imports/lab2_src/input_buffer.sv,1647868644,systemVerilog,,/home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.srcs/sources_1/imports/lab2_src/instruction_buffer.sv,,input_buffer,,uvm,,,,,,
+/home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.srcs/sources_1/imports/lab2_src/instruction_buffer.sv,1647913562,systemVerilog,,/home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.srcs/sources_1/imports/lab2_src/shared_memory.sv,,instruction_buffer,,uvm,,,,,,
+/home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.srcs/sources_1/imports/lab2_src/shared_memory.sv,1647873430,systemVerilog,,/home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.srcs/sources_1/imports/lab2_src/weight_buffer.sv,,shared_memory,,uvm,,,,,,
+/home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.srcs/sources_1/imports/lab2_src/top.sv,1647963312,systemVerilog,,,,top,,uvm,,,,,,
+/home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.srcs/sources_1/imports/lab2_src/weight_buffer.sv,1647868688,systemVerilog,,/home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.srcs/sources_1/imports/lab2_src/top.sv,,weight_buffer,,uvm,,,,,,
