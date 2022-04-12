@@ -17,16 +17,16 @@ module shared_memory#(parameter depth = 64)
 
     reg [127:0] mem [depth-1:0];
     always @(posedge clk) begin
-        if(~reset)begin
+        if(~reset)begin                         // reset when reset==0
             for (i = 0; i < depth; i = i + 1)
                 mem[i] <= 128'b0;
         end
-        else if(wen & ~ren) begin
+        else if(wen & ~ren) begin               // write when wen==1 and ren==0
             q <= 128'd0;
             mem[a] <= d;
-        end else if(ren & ~wen) begin
+        end else if(ren & ~wen) begin           // read when ren==1 and wen==0
             q <= mem[a];
-        end else begin
+        end else begin                          // idle
             q <= 128'd0;
         end
     end

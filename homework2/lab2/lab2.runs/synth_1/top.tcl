@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.runs/synth_1/top.tcl"
+  variable script "/home/guanrenyang/AI3615-AI-Chip-Design/homework2/lab2/lab2.runs/synth_1/top.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,31 +70,37 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param synth.incrementalSynthesisCache ./.Xil/Vivado-70736-My-Ubuntu/incrSyn
+set_param checkpoint.writeSynthRtdsInDcp 1
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7k70tfbv676-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir /home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.cache/wt [current_project]
-set_property parent.project_path /home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.xpr [current_project]
+set_property webtalk.parent_dir /home/guanrenyang/AI3615-AI-Chip-Design/homework2/lab2/lab2.cache/wt [current_project]
+set_property parent.project_path /home/guanrenyang/AI3615-AI-Chip-Design/homework2/lab2/lab2.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo /home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.cache/ip [current_project]
+set_property ip_output_repo /home/guanrenyang/AI3615-AI-Chip-Design/homework2/lab2/lab2.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib -sv {
-  /home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.srcs/sources_1/imports/lab2_src/PE_array.sv
-  /home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.srcs/sources_1/imports/lab2_src/controller.sv
-  /home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.srcs/sources_1/imports/lab2_src/decoder.sv
-  /home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.srcs/sources_1/imports/lab2_src/elementwise_array.sv
-  /home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.srcs/sources_1/imports/lab2_src/elementwise_unit.sv
-  /home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.srcs/sources_1/imports/lab2_src/input_buffer.sv
-  /home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.srcs/sources_1/imports/lab2_src/instruction_buffer.sv
-  /home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.srcs/sources_1/imports/lab2_src/shared_memory.sv
-  /home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.srcs/sources_1/imports/lab2_src/weight_buffer.sv
-  /home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.srcs/sources_1/imports/lab2_src/top.sv
+  /home/guanrenyang/AI3615-AI-Chip-Design/homework2/lab2/lab2.srcs/sources_1/imports/lab2_src/top.sv
+  /home/guanrenyang/AI3615-AI-Chip-Design/homework2/lab2/lab2.srcs/sources_1/imports/lab2_src/PE_array.sv
+  /home/guanrenyang/AI3615-AI-Chip-Design/homework2/lab2/lab2.srcs/sources_1/imports/lab2_src/controller.sv
+  /home/guanrenyang/AI3615-AI-Chip-Design/homework2/lab2/lab2.srcs/sources_1/imports/lab2_src/decoder.sv
+  /home/guanrenyang/AI3615-AI-Chip-Design/homework2/lab2/lab2.srcs/sources_1/imports/lab2_src/elementwise_array.sv
+  /home/guanrenyang/AI3615-AI-Chip-Design/homework2/lab2/lab2.srcs/sources_1/imports/lab2_src/elementwise_unit.sv
+  /home/guanrenyang/AI3615-AI-Chip-Design/homework2/lab2/lab2.srcs/sources_1/imports/lab2_src/input_buffer.sv
+  /home/guanrenyang/AI3615-AI-Chip-Design/homework2/lab2/lab2.srcs/sources_1/imports/lab2_src/instruction_buffer.sv
+  /home/guanrenyang/AI3615-AI-Chip-Design/homework2/lab2/lab2.srcs/sources_1/imports/lab2_src/shared_memory.sv
+  /home/guanrenyang/AI3615-AI-Chip-Design/homework2/lab2/lab2.srcs/sources_1/imports/lab2_src/weight_buffer.sv
+  /home/guanrenyang/AI3615-AI-Chip-Design/homework2/lab2/lab2.srcs/sources_1/imports/lab2_src/PE.sv
+  /home/guanrenyang/AI3615-AI-Chip-Design/homework2/lab2/lab2.srcs/sources_1/new/shift_register.sv
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -106,6 +112,8 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental /home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.srcs/utils_1/imports/synth_1/top.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

@@ -24,7 +24,7 @@ module top
     wire               DECODER_en;   // decoder en
 
     wire [27:0] instruction;
-    wire [7:0]pc;
+    wire [7:0]  pc;
     wire [3:0]    func;
     wire [9:0]    rs1;
     wire [9:0]    rs2;
@@ -48,41 +48,45 @@ module top
     reg [5:0]   input_buffer_a;
     reg [127:0] input_buffer_d;
     wire [127:0] input_buffer_q;
-    wire [1:0] source;
-    wire [1:0] target;
+    wire [1:0] source;                                  // source is rs1 type(shared memory/input buffer/weight buffer)
+    wire [1:0] target;                                  // target is rs2 type(shared memory/input buffer/weight buffer)
     reg signed[31:0]PE_array_in_weight[3:0];             // wire from weight buffer direction
     reg signed[31:0]PE_array_in_input[3:0];
     wire signed[31:0]PE_array_result[3:0];
 
     reg signed[31:0] elementwise_array_in [3:0];
     wire signed [31:0] elementwise_array_out [3:0];
+
+
   always @(*) begin
       shared_memory_a=0;
       shared_memory_d=0;
-      if(cs==PRE_LOAD && source==1) begin
+      if(cs==PRE_LOAD && source==1) begin // could only PRE_LOAD from shared memory
           shared_memory_a=addr1;
       end
       else if( cs==MOVE && source==1) begin
           shared_memory_a=addr1;
       end
       else if(cs==ELECOMP_W2SHM) begin
-          shared_memory_a=addr_result;
+          shared_memory_a=addr_result;   // the only use case of `addr_result` in top
           shared_memory_d={elementwise_array_out[3],elementwise_array_out[2],elementwise_array_out[1],elementwise_array_out[0]};
       end
   end
+
   always @(*) begin
       elementwise_array_in={0,0,0,0};
       if(cs==ELECOMP_W2SHM) 
       elementwise_array_in=PE_array_result;
   end
+
     always @(*) begin
       input_buffer_a=0;
       input_buffer_d=0;
-     if( cs==MOVE && target==1) begin
+     if( cs==MOVE && target==2) begin
           input_buffer_a=addr2;
           input_buffer_d=shared_memory_q;
       end
-      else if(cs==PE_COMP && source==1) begin
+      else if(cs==PE_COMP && source==2) begin
           input_buffer_a=addr1;
           
       end
@@ -90,25 +94,26 @@ module top
     always @(*) begin
       weight_buffer_a=0;
       weight_buffer_d=0;
-     if( cs==MOVE && target==2) begin
+     if( cs==MOVE && target==3) begin
           weight_buffer_a=addr2;
           weight_buffer_d=shared_memory_q;
       end
-      else if(cs==PE_COMP && target==2) begin
+      else if(cs==PE_COMP && target==3) begin
           weight_buffer_a=addr2;
-          
       end
   end
-    always @(*) begin
+    always @(*) begin               // when `cs` changes to `PE_COMP` or `PRE_LOAD`, the input of PE_ARRAY changes concurrently 
       PE_array_in_input={0,0,0,0};
       PE_array_in_weight={0,0,0,0};
      if(cs==PE_COMP ) begin
           PE_array_in_weight={weight_buffer_q[127:96],weight_buffer_q[95:64],weight_buffer_q[63:32],weight_buffer_q[31:0]};
           PE_array_in_input={input_buffer_q[127:96],input_buffer_q[95:64],input_buffer_q[63:32],input_buffer_q[31:0]};
       end
-      else if (cs==PRE_LOAD)
+      else if (cs==PRE_LOAD) // the first row is loaded in share_memory_q at the end of preload cycle 1
            PE_array_in_weight={shared_memory_q[127:96],shared_memory_q[95:64],shared_memory_q[63:32],shared_memory_q[31:0]};
   end
+
+
 
  
 decoder decoder_du
@@ -127,7 +132,7 @@ decoder decoder_du
 controller controller_du (
     .clk(clk),
     .reset(reset),
-    .start(start),    
+    .start(reset),    
     .SHM_en(SHM_en) ,      // shared_memory ren & wen
     .INBUF_en(INBUF_en) ,    // input buffer ren & wen
     .WBUF_en(WBUF_en) ,     // weight buffer ren & wen
@@ -150,7 +155,7 @@ controller controller_du (
     .source(source),
     .target(target)
     );
- elementwise_array  #( 4) elementwise_array_du
+ elementwise_array  #(4) elementwise_array_du
 (
 	// interface to system
     .clk(clk),
@@ -163,13 +168,14 @@ controller controller_du (
 
 	);
 
-    PE_array #( 4)PE_array_du
+    PE_array #(4)PE_array_du
 (
 	// interface to system
     .clk(clk),
     .reset(reset),
     .c_en(PEARRAY_en[0]),                              // compute enable
     .p_en(PEARRAY_en[1]),                              // preload enable
+    .e_en(ELEARRAY_en),
     // interface to PE row .....
 
     .in_weight(PE_array_in_weight),             // wire from weight buffer direction
@@ -204,7 +210,7 @@ instruction_buffer  #(256)instruction_buffer_du
    .q(instruction),
     .clk(clk),
     .reset(reset),
-    .ren(INBUF_en[1]),
+    .ren(INSBUF_en),
     .a(pc)
     );
  input_buffer  #( 8)input_buffer_du

@@ -1,0 +1,146 @@
+/*
+
+Xilinx Vivado v2021.2 (64-bit) [Major: 2021, Minor: 2]
+SW Build: 3367213 on Tue Oct 19 02:47:39 MDT 2021
+IP Build: 3369179 on Thu Oct 21 08:25:16 MDT 2021
+
+Process ID (PID): 10246
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Tue Apr 05 15:22:51 CST 2022
+Time zone: 	China Standard Time (Asia/Shanghai)
+
+OS: Ubuntu
+OS Version: 5.13.0-39-generic
+OS Architecture: amd64
+Available processors (cores): 12
+
+Display: 1
+Screen size: 2560x1440
+Screen resolution (DPI): 125
+Available screens: 2
+Default font: family=Dialog,name=Dialog,style=plain,size=15
+Scale size: 19
+
+Java version: 	11.0.11 64-bit
+Java home: 	/home/guanrenyang/Xilinx/Vivado/2021.2/tps/lnx64/jre11.0.11_9
+Java executable: 	/home/guanrenyang/Xilinx/Vivado/2021.2/tps/lnx64/jre11.0.11_9/bin/java
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Djdk.gtk.version=2, -Dsun.java2d.uiScale.enabled=false, -Xverify:none, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/com.sun.awt=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, -XX:NewSize=60m, -XX:MaxNewSize=60m, -Xms256m, -Xmx3072m, -Xss5m, -Xrs]
+Java initial memory (-Xms): 	256 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	guanrenyang
+User home directory: /home/guanrenyang
+User working directory: /home/guanrenyang/AI3615-AI-Chip-Design/homework2/lab2
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /home/guanrenyang/Xilinx/Vivado
+HDI_APPROOT: /home/guanrenyang/Xilinx/Vivado/2021.2
+RDI_DATADIR: /home/guanrenyang/Xilinx/Vivado/2021.2/data
+RDI_BINDIR: /home/guanrenyang/Xilinx/Vivado/2021.2/bin
+
+Vivado preferences file: /home/guanrenyang/.Xilinx/Vivado/2021.2/vivado.xml
+Vivado preferences directory: /home/guanrenyang/.Xilinx/Vivado/2021.2/
+Vivado layouts directory: /home/guanrenyang/.Xilinx/Vivado/2021.2/data/layouts
+PlanAhead jar file: 	/home/guanrenyang/Xilinx/Vivado/2021.2/lib/classes/planAhead.jar
+Vivado log file: 	/home/guanrenyang/AI3615-AI-Chip-Design/homework2/lab2/vivado.log
+Vivado journal file: 	/home/guanrenyang/AI3615-AI-Chip-Design/homework2/lab2/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-10246-My-Ubuntu
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /home/guanrenyang/Xilinx/Vivado/2021.2/ids_lite/ISE
+XILINX_DSP: /home/guanrenyang/Xilinx/Vivado/2021.2/ids_lite/ISE
+XILINX_HLS: /home/guanrenyang/Xilinx/Vitis_HLS/2021.2
+XILINX_PLANAHEAD: /home/guanrenyang/Xilinx/Vivado/2021.2
+XILINX_VITIS: 
+XILINX_VIVADO: /home/guanrenyang/Xilinx/Vivado/2021.2
+XILINX_VIVADO_HLS: /home/guanrenyang/Xilinx/Vivado/2021.2
+
+
+GUI allocated memory:	308 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,860 MB
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,806 MB. GUI used memory: 61 MB. Current time: 4/5/22, 3:22:52 PM CST
+selectButton(PAResourceEtoH.GettingStartedView_OPEN_PROJECT, "Open Project"); // y
+// Run Command: PAResourceCommand.PACommandNames_OPEN_PROJECT
+setFileChooser("/home/guanrenyang/AI3615-AI-Chip-Design/homework2/lab2/lab2.xpr");
+// Opening Vivado Project: /home/guanrenyang/AI3615-AI-Chip-Design/homework2/lab2/lab2.xpr. Version: Vivado v2021.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 124 MB (+127335kb) [00:00:15]
+// [Engine Memory]: 1,867 MB (+1806588kb) [00:00:15]
+// WARNING: HEventQueue.dispatchEvent() is taking  1954 ms.
+// Tcl Message: open_project /home/guanrenyang/AI3615-AI-Chip-Design/homework2/lab2/lab2.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from '/home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2' since last save. INFO: [filemgmt 56-2] Default IP Output Path : Could not find the directory '/home/guanrenyang/AI3615-AI-Chip-Design/homework2/lab2/lab2.gen/sources_1', nor could it be found using path '/home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.gen/sources_1'. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/guanrenyang/Xilinx/Vivado/2021.2/data/ip'. 
+// Project name: lab2; location: /home/guanrenyang/AI3615-AI-Chip-Design/homework2/lab2; part: xc7k70tfbv676-1
+dismissDialog("Open Project"); // bA
+// [Engine Memory]: 1,991 MB (+31815kb) [00:00:19]
+// Tcl Message: update_compile_order -fileset sources_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,973 MB. GUI used memory: 73 MB. Current time: 4/5/22, 3:23:07 PM CST
+// Elapsed time: 21 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.sv)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.sv)]", 1, true, false, false, false, false, true); // D - Double Click - Node
+// WARNING: HEventQueue.dispatchEvent() is taking  1105 ms.
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.sv), controller_du : controller (controller.sv)]", 3, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, PE (PE.sv)]", 10, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, PE (PE.sv)]", 10, false); // D
+// [GUI Memory]: 133 MB (+2876kb) [00:19:35]
+// Elapsed time: 1642 seconds
+selectCodeEditor("top.sv", 221, 244); // be
+selectCodeEditor("top.sv", 104, 164); // be
+selectCodeEditor("top.sv", 72, 332); // be
+selectCodeEditor("top.sv", 74, 366); // be
+selectCodeEditor("top.sv", 114, 97); // be
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // m
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.sv), elementwise_array_du : elementwise_array (elementwise_array.sv)]", 4, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.sv), elementwise_array_du : elementwise_array (elementwise_array.sv)]", 4, true, false, false, false, false, true); // D - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.sv), elementwise_array_du : elementwise_array (elementwise_array.sv), label1[1].elementwise_unit : elementwise_unit (elementwise_unit.sv)]", 6, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.sv), elementwise_array_du : elementwise_array (elementwise_array.sv), label1[1].elementwise_unit : elementwise_unit (elementwise_unit.sv)]", 6, false, false, false, false, false, true); // D - Double Click
+// WARNING: HEventQueue.dispatchEvent() is taking  1015 ms.
+selectCodeEditor("elementwise_unit.sv", 119, 205); // be
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.sv), elementwise_array_du : elementwise_array (elementwise_array.sv), label1[0].elementwise_unit : elementwise_unit (elementwise_unit.sv)]", 5, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.sv), elementwise_array_du : elementwise_array (elementwise_array.sv), label1[0].elementwise_unit : elementwise_unit (elementwise_unit.sv)]", 5, false, false, false, false, false, true); // D - Double Click
+dismissDialog("Opening Editor"); // bA
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.sv)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.sv)]", 1, true, false, false, false, false, true); // D - Double Click - Node
+// WARNING: HEventQueue.dispatchEvent() is taking  1007 ms.
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, PE (PE.sv)]", 2, false); // D
+selectCodeEditor("top.sv", 206, 210); // be
+selectCodeEditor("top.sv", 483, 447); // be
+selectCodeEditor("top.sv", 3, 12); // be
+selectCodeEditor("top.sv", 608, 505); // be

@@ -2,48 +2,15 @@
 # Vivado v2021.2 (64-bit)
 # SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
 # IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-# Start of session at: Mon Apr  4 20:19:41 2022
-# Process ID: 10176
-# Current directory: /home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.runs/synth_1
+# Start of session at: Wed Apr 13 00:17:44 2022
+# Process ID: 72179
+# Current directory: /home/guanrenyang/AI3615-AI-Chip-Design/homework2/lab2/lab2.runs/synth_1
 # Command line: vivado -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
-# Log file: /home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.runs/synth_1/top.vds
-# Journal file: /home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.runs/synth_1/vivado.jou
+# Log file: /home/guanrenyang/AI3615-AI-Chip-Design/homework2/lab2/lab2.runs/synth_1/top.vds
+# Journal file: /home/guanrenyang/AI3615-AI-Chip-Design/homework2/lab2/lab2.runs/synth_1/vivado.jou
 # Running On: My-Ubuntu, OS: Linux, CPU Frequency: 2600.000 MHz, CPU Physical cores: 6, Host memory: 16548 MB
 #-----------------------------------------------------------
 source top.tcl -notrace
-Command: synth_design -top top -part xc7k70tfbv676-1
-Starting synth_design
-Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
-INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
-INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
-INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 10194
----------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2602.809 ; gain = 0.000 ; free physical = 1091 ; free virtual = 12215
----------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'top' [/home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.srcs/sources_1/imports/lab2_src/top.sv:1]
-INFO: [Synth 8-6157] synthesizing module 'decoder' [/home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.srcs/sources_1/imports/lab2_src/decoder.sv:1]
-INFO: [Synth 8-6155] done synthesizing module 'decoder' (1#1) [/home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.srcs/sources_1/imports/lab2_src/decoder.sv:1]
-INFO: [Synth 8-6157] synthesizing module 'controller' [/home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.srcs/sources_1/imports/lab2_src/controller.sv:1]
-WARNING: [Synth 8-6014] Unused sequential element result_addr_reg_reg was removed.  [/home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.srcs/sources_1/imports/lab2_src/controller.sv:59]
-WARNING: [Synth 8-6014] Unused sequential element result_addr_reg_reg was removed.  [/home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.srcs/sources_1/imports/lab2_src/controller.sv:132]
-WARNING: [Synth 8-3848] Net addr_result in module/entity controller does not have driver. [/home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.srcs/sources_1/imports/lab2_src/controller.sv:23]
-WARNING: [Synth 8-3848] Net target in module/entity controller does not have driver. [/home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.srcs/sources_1/imports/lab2_src/controller.sv:26]
-INFO: [Synth 8-6155] done synthesizing module 'controller' (2#1) [/home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.srcs/sources_1/imports/lab2_src/controller.sv:1]
-INFO: [Synth 8-6157] synthesizing module 'elementwise_array' [/home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.srcs/sources_1/imports/lab2_src/elementwise_array.sv:1]
-	Parameter num bound to: 4 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'elementwise_unit' [/home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.srcs/sources_1/imports/lab2_src/elementwise_unit.sv:1]
-INFO: [Synth 8-6155] done synthesizing module 'elementwise_unit' (3#1) [/home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.srcs/sources_1/imports/lab2_src/elementwise_unit.sv:1]
-ERROR: [Synth 8-319] illegal variable bit-select in left-hand-side of continuous assignment [/home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.srcs/sources_1/imports/lab2_src/elementwise_array.sv:26]
-ERROR: [Synth 8-196] conditional expression could not be resolved to a constant [/home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.srcs/sources_1/imports/lab2_src/elementwise_array.sv:18]
-ERROR: [Synth 8-6156] failed synthesizing module 'elementwise_array' [/home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.srcs/sources_1/imports/lab2_src/elementwise_array.sv:1]
-ERROR: [Synth 8-6156] failed synthesizing module 'top' [/home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.srcs/sources_1/imports/lab2_src/top.sv:1]
----------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2602.809 ; gain = 0.000 ; free physical = 874 ; free virtual = 11998
----------------------------------------------------------------------------------
-synthesize failed
-INFO: [Common 17-83] Releasing license: Synthesis
-13 Infos, 4 Warnings, 0 Critical Warnings and 5 Errors encountered.
-synth_design failed
-ERROR: [Common 17-69] Command failed: Vivado Synthesis failed
-INFO: [Common 17-206] Exiting Vivado at Mon Apr  4 20:19:55 2022...
+Command: read_checkpoint -auto_incremental -incremental /home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.srcs/utils_1/imports/synth_1/top.dcp
+ERROR: [Common 17-69] Command failed: File '/home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.srcs/utils_1/imports/synth_1/top.dcp' does not exist
+INFO: [Common 17-206] Exiting Vivado at Wed Apr 13 00:17:53 2022...

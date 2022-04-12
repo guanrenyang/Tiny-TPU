@@ -1,5 +1,6 @@
 # compile verilog/system verilog design source files
 sv xil_defaultlib  \
+"../../../../lab2.srcs/sources_1/imports/lab2_src/top.sv" \
 "../../../../lab2.srcs/sources_1/imports/lab2_src/PE_array.sv" \
 "../../../../lab2.srcs/sources_1/imports/lab2_src/controller.sv" \
 "../../../../lab2.srcs/sources_1/imports/lab2_src/decoder.sv" \
@@ -9,7 +10,9 @@ sv xil_defaultlib  \
 "../../../../lab2.srcs/sources_1/imports/lab2_src/instruction_buffer.sv" \
 "../../../../lab2.srcs/sources_1/imports/lab2_src/shared_memory.sv" \
 "../../../../lab2.srcs/sources_1/imports/lab2_src/weight_buffer.sv" \
-"../../../../lab2.srcs/sources_1/imports/lab2_src/top.sv" \
+"../../../../lab2.srcs/sources_1/imports/lab2_src/PE.sv" \
+"../../../../lab2.srcs/sources_1/new/shift_register.sv" \
+"../../../../lab2.srcs/sim_1/new/tb_top.sv" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"

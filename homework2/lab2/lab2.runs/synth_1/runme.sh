@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/guanrenyang/AI3615-AI-Chip-Design/Lab2/lab2/lab2.runs/synth_1'
+HD_PWD='/home/guanrenyang/AI3615-AI-Chip-Design/homework2/lab2/lab2.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
