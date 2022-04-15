@@ -8,6 +8,26 @@ Course project of AI3615 AI chip design, Shanghai Jiao Tong University(SJTU).
 
 ## Contents
 
+### Homework 1: Parallel Programming
+
+1. **Customed layer in pytorch**
+2. **CPP binding**
+3. **Cuda programming——Matrix Multiplication Kernel**
+
+### Homework 2: Tiny TPU with Systolic Array
+
+**Architecture**
+
+<img src="https://michael-picgo.obs.cn-east-3.myhuaweicloud.com/img/arch.png" alt="arch" style="zoom: 67%;" />
+
+**Systolic Array Design**
+
+<img src="https://michael-picgo.obs.cn-east-3.myhuaweicloud.com/img/cycle-4.png" alt="cycle-4" style="zoom: 40%;" />
+
+
+
+##  Directory Structure
+
 ```
 ├── homework1					//第一次作业
 │   ├── 1. pytorch basics			//第一次作业 Part 1：pytorch基础
@@ -37,8 +57,30 @@ Course project of AI3615 AI chip design, Shanghai Jiao Tong University(SJTU).
 │   │   └── README.md
 │   └── README.md
 ├── homework2				//第二次作业: Tiny-TPU
+│   ├── AI Chip Design Lab2.pdf
+│   ├── data_files
+│   │   ├── instructions.dat
+│   │   └── shared_memory_contents.dat
+│   ├── Lab2说明.pdf
+│   ├── pictures
+│   ├── README.md
+│   ├── src
+│   │   ├── controller.sv
+│   │   ├── decoder.sv
+│   │   ├── elementwise_array.sv
+│   │   ├── elementwise_unit.sv
+│   │   ├── input_buffer.sv
+│   │   ├── instruction_buffer.sv
+│   │   ├── PE_array.sv
+│   │   ├── PE.sv
+│   │   ├── shared_memory.sv
+│   │   ├── top.sv
+│   │   └── weight_buffer.sv
+│   └── test_bench
+│       └── tb_top.sv
 ├── LICENSE
 └── README.md
+
 
 ```
 

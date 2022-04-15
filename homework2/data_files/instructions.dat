@@ -1,0 +1,18 @@
+// move matrix 1 to input buffer
+0001_0001_000000_0010_000000_0001
+// move matrix 2 to weight buffer
+0001_0001_001000_0100_000000_0001
+// don't preload, just specify output address
+0010_0001_010000_0001_010000_0010
+// compute with relu
+0001_0010_000000_0100_000000_0100
+
+
+// move matrix 1 to input buffer
+0001_0001_000100_0010_000100_0001
+// move matrix 2 to weight buffer
+0001_0001_001100_0100_000100_0001
+// preload bias matrix
+0001_0001_010000_0001_010000_0010
+// compute without relu
+0010_0010_000100_0100_000100_0100
