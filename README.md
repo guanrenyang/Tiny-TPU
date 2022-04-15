@@ -8,13 +8,14 @@ Course project of AI3615 AI chip design, Shanghai Jiao Tong University(SJTU).
 
 ## Contents
 
-### Homework 1: Parallel Programming
+### [Homework 1: Parallel Programming](https://github.com/guanrenyang/AI3615-AI-Chip-Design/tree/main/homework1)
+
 
 1. **Customed layer in pytorch**
 2. **CPP binding**
 3. **Cuda programming——Matrix Multiplication Kernel**
 
-### Homework 2: Tiny TPU with Systolic Array
+### [Homework 2: Tiny TPU with Systolic Array](https://github.com/guanrenyang/AI3615-AI-Chip-Design/tree/main/homework2)
 
 **Architecture**
 
