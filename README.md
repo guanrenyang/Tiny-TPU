@@ -1,4 +1,4 @@
-# AI3615 AI Chip Design
+# Tiny-TPU
 
 ## Introduction
 
